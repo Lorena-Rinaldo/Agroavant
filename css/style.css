@@ -63,15 +63,15 @@ header {
     align-items: center;
     justify-content: flex-end;
     width: 50%;
-    gap: 12%;
+    gap: 2em;
     margin-right: 4%;
 }
 
-nav ul {
+.menu nav ul {
     display: flex;
     flex-direction: row;
     list-style: none;
-    gap: 10%;
+    gap: 1.5em;
 }
 
 button {
@@ -97,7 +97,7 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: auto;
     width: auto;
     background-color: var(--preto-fundo);
 
@@ -176,13 +176,18 @@ section {
             width: 50%;
             text-align: left;
 
-            h1 {
-                font-family: var(--fonte-titulo);
-                font-size: 2em;
-                line-height: 1.4;
-                text-transform: uppercase;
-                margin-bottom: 1.5em;
-                text-align: center;
+            .titulo-beneficios {
+                display: flex;
+                width: auto;
+
+                h1 {
+                    font-family: var(--fonte-titulo);
+                    font-size: 2em;
+                    line-height: 1.4;
+                    text-transform: uppercase;
+                    margin-bottom: 1.5em;
+                    text-align: center;
+                }
             }
 
             .lista-beneficios {
@@ -291,23 +296,24 @@ section {
     }
 
     &.especificacoes {
+        display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        padding: 2em;
+        padding: 5em;
+        width: 100%;
         background-color: var(--preto-fundo);
-        gap: 0.2em;
+        gap: 0.4em;
         border-top: 0.1em solid rgba(var(--cor-texto-rgb), 1);
         border-bottom: 0.1em solid rgba(var(--cor-texto-rgb), 1);
 
         .cards {
-            background-color: var(--cor-fundo-cards);
-            width: 30%;
-            height: 45%;
-            padding: 2em 2em 0 2em;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
+            background-color: var(--cor-fundo-cards);
+            max-width: auto;
+            width: 33%;
+            height: 14em;
+            padding: 2em 2em 0 2em;
             border-radius: 8px;
             background-color: var(--cor-fundo-cards);
             text-align: center;
@@ -327,13 +333,21 @@ section {
 
             h2 {
                 font-family: var(--fonte-titulo);
-                font-size: 1.4em;
+                font-size: 1.5rem;
                 margin-bottom: 0.5em;
                 color: var(--cor-texto);
             }
 
             p {
                 color: #ccc;
+            }
+
+            .conteudo-cards {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: auto;
             }
         }
     }
@@ -571,5 +585,138 @@ section {
                 }
             }
         }
+    }
+}
+
+@media (max-width: 1024px) {
+    section.especificacoes {
+        justify-content: center;
+        gap: 1.5em;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    section.especificacoes .cards {
+        width: 48%;
+        margin-bottom: 2em;
+    }
+
+    section.linha_home .texto-video h1 {
+        font-size: 3.5em;
+    }
+
+    section.depoimentos .depoimento-texto h2 {
+        font-size: 2.2em;
+    }
+
+    section.agendar-demonstracao .container-demonstracao {
+        gap: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        align-items: center;
+        padding: 1em;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    section.link-videos {
+        flex-direction: column;
+        padding: 3em 1em;
+    }
+
+    section.link-videos .coluna-esquerda,
+    section.link-videos .coluna-direita {
+        width: 100%;
+        text-align: center;
+    }
+
+    section.link-videos .coluna-esquerda .titulo-beneficios h1 {
+        font-size: 1.5em; 
+    }
+
+    section.link-videos .coluna-esquerda .lista-beneficios {
+        flex-direction: column;
+        margin: 0;
+        gap: 1.5em;
+    }
+
+    section.especificacoes {
+        padding: 3em 1em;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    section.especificacoes .cards {
+        width: 100%;
+        margin-bottom: 0;
+    }
+    
+    section.depoimentos .depoimento-container {
+        flex-direction: column;
+    }
+
+    section.depoimentos .depoimento-texto {
+        text-align: center;
+    }
+
+    section.depoimentos .depoimento-texto p {
+        border-left: none;
+        padding-left: 0;
+    }
+
+     section.agendar-demonstracao .container-demonstracao {
+        flex-direction: column;
+    }
+
+    .agendar-demonstracao .demonstracao-texto {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media(max-width: 480px) {
+    body {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 2.5em 1.5em;
+    }
+
+    section.linha_home .texto-video h1 {
+        font-size: 2.2em;
+        line-height: 1.2;
+    }
+
+    section.linha_home .texto-video h3 {
+        font-size: 1.1em;
+    }
+
+    section.depoimentos .depoimento-texto h2 {
+        font-size: 1.8em;
+    }
+
+    section.depoimentos .foto-testemunha img {
+        width: 9em;
+        height: 9em;
+    }
+
+    section.agendar-demonstracao .demonstracao-texto h2 {
+        font-size: 2em;
+    }
+
+    section.agendar-demonstracao .container-formulario {
+        padding: 1.5em;
+    }
+
+    button,
+    .btn-enviar {
+        padding: 0.9em 1.5em;
+        font-size: 1em;
     }
 }
