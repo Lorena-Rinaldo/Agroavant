@@ -620,16 +620,6 @@ section {
         display: none;
     }
 
-    .linha_home video {
-        display: none;
-    }
-
-    .linha_home {
-        background-image: url('../assets/Imagem\ 1.png');
-        background-position: center center;
-        background-size: cover;
-    }
-
     section.link-videos {
         flex-direction: column;
         padding: 3em 1em;
