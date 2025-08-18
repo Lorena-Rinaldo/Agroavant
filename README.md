@@ -76,7 +76,6 @@ A estrutura de arquivos e pastas do projeto está organizada da seguinte forma:
 ├── assets/
 │ ├── Imagem 1.png
 │ ├── Imagem 2.png
-│ ├── Imagem 3.jpg
 │ ├── Imagem 4.jpg
 │ ├── Vídeo 1.webm
 │ ├── Vídeo 2.webm
