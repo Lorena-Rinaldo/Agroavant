@@ -1,4 +1,4 @@
-#  🌱 Agrovant 🌱 - Landing Page para Drone Agrícola
+#  🌱 Agrovant 🌱
 
 <p align="center">
   <img src="./assets/Imagem 2.png" alt="Imagem Drone">
