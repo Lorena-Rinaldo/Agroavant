@@ -589,6 +589,16 @@ section {
 }
 
 @media (max-width: 1024px) {
+    .linha_home video {
+        display: none;
+    }
+
+    .linha_home {
+        background-image: url('../assets/Imagem\ 1.png');
+        background-position: center center;
+        background-size: cover;
+    }
+
     section.especificacoes {
         justify-content: center;
         gap: 1.5em;
@@ -622,6 +632,16 @@ section {
 
     header nav {
         display: none;
+    }
+
+    .linha_home video {
+        display: none;
+    }
+
+    .linha_home {
+        background-image: url('../assets/Imagem\ 1.png');
+        background-position: center center;
+        background-size: cover;
     }
 
     section.link-videos {
