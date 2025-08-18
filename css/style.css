@@ -114,16 +114,12 @@ section {
 
         video {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1;
-            transform: translateX(-50%) translateY(-50%);
-            background-size: cover;
-            transition: 1s opacity;
+            top: 0;
+            left:0;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
         }
 
         .conteudo-video {
@@ -589,16 +585,6 @@ section {
 }
 
 @media (max-width: 1024px) {
-    .linha_home video {
-        display: none;
-    }
-
-    .linha_home {
-        background-image: url('../assets/Imagem\ 1.png');
-        background-position: center center;
-        background-size: cover;
-    }
-
     section.especificacoes {
         justify-content: center;
         gap: 1.5em;
